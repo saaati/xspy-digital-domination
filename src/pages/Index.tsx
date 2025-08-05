@@ -1,17 +1,17 @@
-import { HeroSection } from "@/components/HeroSection"
-import { FeaturesSection } from "@/components/FeaturesSection"
-import { PlansSection } from "@/components/PlansSection"
-import { DisclaimerSection } from "@/components/DisclaimerSection"
-import { Footer } from "@/components/Footer"
+import { AggressiveHero } from "@/components/AggressiveHero"
+import { MockupDemo } from "@/components/MockupDemo"
+import { AggressivePlans } from "@/components/AggressivePlans"
+import { FixedCTA } from "@/components/FixedCTA"
+import { DiscreteFooter } from "@/components/DiscreteFooter"
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <HeroSection />
-      <FeaturesSection />
-      <PlansSection />
-      <DisclaimerSection />
-      <Footer />
+    <div className="min-h-screen">
+      <AggressiveHero />
+      <MockupDemo />
+      <AggressivePlans />
+      <DiscreteFooter />
+      <FixedCTA />
     </div>
   );
 };
