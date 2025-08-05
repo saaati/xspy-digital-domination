@@ -5,33 +5,36 @@ export const AggressivePlans = () => {
     {
       name: "INICIAL",
       devices: "2 CELULARES",
-      period: "3 MESES",
+      period: "3 MESES DE ACESSO",
+      price: "R$ 449,00",
+      renewalPrice: "R$ 314,70",
       color: "from-cyan-500 to-blue-500",
       glow: "cyan-500",
-      features: ["Acesso básico", "Suporte chat", "Interface completa"],
-      link: "https://www.asaas.com/c/fhfuz84psxlqcj66",
-      price: "BÁSICO"
+      features: ["Acesso básico", "Suporte chat", "Interface completa", "Renovação 40% mais barata"],
+      link: "https://www.asaas.com/c/fhfuz84psxlqcj66"
     },
     {
       name: "INTERMEDIÁRIO",
       devices: "4 CELULARES", 
-      period: "4 MESES",
+      period: "3 MESES DE ACESSO",
+      price: "R$ 690,00",
+      renewalPrice: "R$ 414,00",
       color: "from-lime-500 to-green-500",
       glow: "lime-500",
-      features: ["Funções completas", "Suporte prioritário", "Relatórios avançados"],
+      features: ["Funções completas", "Suporte prioritário", "Relatórios avançados", "Renovação 40% mais barata"],
       link: "https://www.asaas.com/c/jwplviezr8preie4",
-      price: "POPULAR",
       popular: true
     },
     {
       name: "VIP TOTAL",
       devices: "6 CELULARES",
-      period: "12 MESES", 
+      period: "3 MESES DE ACESSO", 
+      price: "R$ 1.690,00",
+      renewalPrice: "R$ 1.014,00",
       color: "from-yellow-500 to-orange-500",
       glow: "yellow-500",
-      features: ["ACESSO TOTAL", "Suporte VIP 24/7", "Recursos exclusivos", "Updates gratuitos"],
-      link: "https://www.asaas.com/c/s7do2fes7qqj41fn",
-      price: "ELITE"
+      features: ["ACESSO TOTAL", "Suporte VIP 24/7", "Recursos exclusivos", "Updates gratuitos", "Renovação 40% mais barata"],
+      link: "https://www.asaas.com/c/s7do2fes7qqj41fn"
     }
   ]
 
@@ -80,7 +83,15 @@ export const AggressivePlans = () => {
                   <div className={`text-4xl font-black bg-gradient-to-r ${plan.color} bg-clip-text text-transparent`}>
                     {plan.devices}
                   </div>
-                  <p className="text-white/70 text-lg">+ {plan.period}</p>
+                  <p className="text-white/70 text-lg font-bold">{plan.period}</p>
+                  <div className="mt-4">
+                    <div className={`text-3xl font-black bg-gradient-to-r ${plan.color} bg-clip-text text-transparent`}>
+                      {plan.price}
+                    </div>
+                    <p className="text-white/60 text-sm mt-1">
+                      Renovação: {plan.renewalPrice} (40% OFF)
+                    </p>
+                  </div>
                 </div>
 
                 {/* Features */}
@@ -101,7 +112,7 @@ export const AggressivePlans = () => {
                     boxShadow: `0 0 20px hsl(var(--${plan.glow}) / 0.4)`
                   }}
                 >
-                  🚀 GARANTIR ACESSO {plan.price}
+                  🚀 GARANTIR ACESSO - {plan.price}
                 </Button>
               </div>
             </div>
