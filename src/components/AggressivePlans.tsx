@@ -21,6 +21,7 @@ export const AggressivePlans = () => {
       price: "R$ 449,00",
       color: "from-blue-500 to-cyan-500",
       glow: "blue-500",
+      inheritedFrom: "Todas as funções do Plano Inicial +",
       features: ["✅ Inclui método de infecção via .PDF", "✅ Acesso completo ao painel de controle", "✅ Suporte padrão via chat"],
       link: "https://www.asaas.com/c/jwplviezr8preie4",
       popular: true
@@ -33,6 +34,7 @@ export const AggressivePlans = () => {
       price: "R$ 690,00",
       color: "from-yellow-500 to-orange-500",
       glow: "yellow-500",
+      inheritedFrom: "Todas as funções do Plano Intermediário +",
       features: ["✅ Método completo com .PDF infectável", "✅ Atendimento prioritário", "✅ Servidores robustos — sem delay", "✅ Informações em tempo real", "✅ Relatórios detalhados e atualizações"],
       link: "https://www.asaas.com/c/s7do2fes7qqj41fn"
     },
@@ -44,6 +46,7 @@ export const AggressivePlans = () => {
       price: "R$ 1.690,00",
       color: "from-red-500 to-pink-500",
       glow: "red-500",
+      inheritedFrom: "Todas as funções do Plano Avançado +",
       features: ["🔥 Pacote mais completo e poderoso", "✅ Infecção avançada (PDF + Weblink + Spoofing)", "✅ Acesso instantâneo com servidores dedicados", "✅ Painel com inteligência artificial de análise", "✅ Suporte VIP 24h via WhatsApp", "✅ Relatórios forenses + backups automáticos", "✅ Atualizações gratuitas incluídas", "✅ Assistência técnica remota"],
       link: "https://www.asaas.com/c/s7do2fes7qqj41fn",
       vip: true
@@ -71,11 +74,11 @@ export const AggressivePlans = () => {
         </div>
 
         {/* Plans Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative glass-dark p-8 rounded-2xl border-2 transition-all duration-300 hover-scale ${
+              className={`relative glass-dark p-6 lg:p-8 rounded-2xl border-2 transition-all duration-300 hover-scale flex flex-col h-full ${
                 plan.popular 
                   ? "border-lime-500 shadow-2xl shadow-lime-500/20" 
                   : "border-white/20 hover:border-lime-400/50"
@@ -88,41 +91,52 @@ export const AggressivePlans = () => {
                 </div>
               )}
 
-              <div className="text-center space-y-6">
+              <div className="text-center space-y-4 lg:space-y-6 flex-1 flex flex-col">
                 {/* Plan Header */}
-                <div>
-                  <h3 className="text-2xl font-black text-white mb-2">{plan.name}</h3>
-                  <div className={`text-4xl font-black bg-gradient-to-r ${plan.color} bg-clip-text text-transparent`}>
+                <div className="flex-shrink-0">
+                  <h3 className="text-xl lg:text-2xl font-black text-white mb-2">{plan.name}</h3>
+                  <div className={`text-3xl lg:text-4xl font-black bg-gradient-to-r ${plan.color} bg-clip-text text-transparent`}>
                     {plan.devices}
                   </div>
-                  <p className="text-white/70 text-lg font-bold">{plan.period}</p>
+                  <p className="text-white/70 text-base lg:text-lg font-bold">{plan.period}</p>
                   <div className="mt-4">
                     <p className="text-white/60 text-sm">De: {plan.originalPrice}</p>
-                    <div className={`text-3xl font-black bg-gradient-to-r ${plan.color} bg-clip-text text-transparent`}>
+                    <div className={`text-2xl lg:text-3xl font-black bg-gradient-to-r ${plan.color} bg-clip-text text-transparent`}>
                       Por: {plan.price}
                     </div>
                   </div>
                 </div>
 
+                {/* Inherited Features */}
+                {plan.inheritedFrom && (
+                  <div className="flex-shrink-0">
+                    <p className="text-white/60 text-xs lg:text-sm font-semibold border-b border-white/20 pb-2 mb-3">
+                      {plan.inheritedFrom}
+                    </p>
+                  </div>
+                )}
+
                 {/* Features */}
-                <div className="space-y-3">
+                <div className="space-y-2 lg:space-y-3 flex-1 text-left">
                   {plan.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-start gap-3 text-left">
-                      <span className="text-white/80 text-sm leading-relaxed">{feature}</span>
+                    <div key={idx} className="flex items-start gap-2 lg:gap-3">
+                      <span className="text-white/80 text-xs lg:text-sm leading-relaxed">{feature}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* CTA Button */}
-                <Button
-                  className={`w-full bg-gradient-to-r ${plan.color} text-black font-black text-lg py-6 h-auto rounded-xl hover-scale`}
-                  onClick={() => window.open(plan.link, '_blank')}
-                  style={{
-                    boxShadow: `0 0 20px hsl(var(--${plan.glow}) / 0.4)`
-                  }}
-                >
-                  🚀 GARANTIR ACESSO
-                </Button>
+                <div className="flex-shrink-0 mt-auto pt-4">
+                  <Button
+                    className={`w-full bg-gradient-to-r ${plan.color} text-black font-black text-base lg:text-lg py-4 lg:py-6 h-auto rounded-xl hover-scale`}
+                    onClick={() => window.open(plan.link, '_blank')}
+                    style={{
+                      boxShadow: `0 0 20px hsl(var(--${plan.glow}) / 0.4)`
+                    }}
+                  >
+                    🚀 GARANTIR ACESSO
+                  </Button>
+                </div>
               </div>
             </div>
           ))}
