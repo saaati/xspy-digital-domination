@@ -8,59 +8,56 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Modern Dark Background with Cyan/Turquoise Gradient */
-    --background: 220 30% 2%;
-    --foreground: 190 20% 98%;
+    /* Dark Premium Background */
+    --background: 0 0% 5.5%;
+    --foreground: 0 0% 98%;
 
-    /* Cards with Glassmorphism */
-    --card: 220 25% 4%;
-    --card-foreground: 190 15% 95%;
+    /* Premium Cards */
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 220 25% 4%;
-    --popover-foreground: 190 15% 95%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    /* Clean Tech Colors */
-    --primary: 180 100% 65%;
-    --primary-foreground: 220 30% 8%;
+    /* Aggressive Neon Colors */
+    --primary: 84 100% 58%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 170 100% 45%;
-    --secondary-foreground: 220 30% 8%;
+    --secondary: 191 100% 50%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 220 20% 6%;
-    --muted-foreground: 190 15% 70%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 160 100% 50%;
-    --accent-foreground: 220 30% 8%;
+    --accent: 191 100% 50%;
+    --accent-foreground: 0 0% 0%;
 
-    --destructive: 0 70% 55%;
-    --destructive-foreground: 190 20% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    /* Subtle Borders */
-    --border: 190 25% 12%;
-    --input: 190 20% 10%;
-    --ring: 180 100% 65%;
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 84 100% 58%;
 
     --radius: 1rem;
 
-    /* Modern Tech Colors - Clean Cyan/Turquoise Palette */
-    --cyber-cyan: 180 100% 65%;      /* Main cyan */
-    --neon-aqua: 170 100% 45%;       /* Aqua accent */
-    --electric-teal: 160 100% 50%;   /* Teal highlights */
-    --plasma-blue: 190 100% 60%;     /* Blue variant */
-    --warning-amber: 35 100% 55%;    /* Warm accent */
+    /* Aggressive Premium Colors */
+    --neon-lime: 84 100% 58%;      /* Verde limão neon */
+    --cyber-cyan: 191 100% 50%;    /* Azul ciano */
+    --alert-red: 0 84% 60%;        /* Vermelho alerta */
+    --plasma-purple: 270 100% 65%; /* Roxo plasma */
+    --gold-premium: 45 100% 60%;   /* Ouro premium */
     
-    /* Clean Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--cyber-cyan)), hsl(var(--electric-teal)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--plasma-blue)), hsl(var(--neon-aqua)));
-    --gradient-tech: linear-gradient(45deg, hsl(var(--cyber-cyan)), hsl(var(--electric-teal)), hsl(var(--neon-aqua)));
-    --gradient-background: linear-gradient(180deg, hsl(220 30% 2%), hsl(190 20% 3%));
-    --gradient-glass: linear-gradient(135deg, hsl(190 25% 8% / 0.1), hsl(180 20% 12% / 0.15));
+    /* Aggressive Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--neon-lime)), hsl(var(--cyber-cyan)));
+    --gradient-danger: linear-gradient(135deg, hsl(var(--alert-red)), hsl(var(--plasma-purple)));
+    --gradient-premium: linear-gradient(135deg, hsl(var(--gold-premium)), hsl(var(--neon-lime)));
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 5.5%), hsl(0 0% 3%));
     
-    /* Subtle Glows */
-    --glow-primary: 0 0 25px hsl(var(--cyber-cyan) / 0.3);
-    --glow-secondary: 0 0 20px hsl(var(--electric-teal) / 0.25);
-    --glow-accent: 0 0 30px hsl(var(--neon-aqua) / 0.35);
-    --glow-glass: 0 4px 20px hsl(190 30% 8% / 0.3);
+    /* Aggressive Glows */
+    --glow-lime: 0 0 30px hsl(var(--neon-lime) / 0.5);
+    --glow-cyan: 0 0 25px hsl(var(--cyber-cyan) / 0.4);
+    --glow-red: 0 0 35px hsl(var(--alert-red) / 0.6);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -129,40 +126,43 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    background: var(--gradient-background);
-    font-family: 'JetBrains Mono', 'Share Tech Mono', monospace;
+    background: var(--gradient-dark);
+    font-family: 'Poppins', 'Space Grotesk', system-ui, sans-serif;
     font-weight: 400;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'JetBrains Mono', 'Share Tech Mono', monospace;
+    font-family: 'Space Grotesk', 'Poppins', system-ui, sans-serif;
     font-weight: 700;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.02em;
   }
 
-  /* Glass Cards */
-  .glass-card {
-    background: var(--gradient-glass);
-    backdrop-filter: blur(10px);
-    border: 1px solid hsl(var(--border) / 0.3);
-    box-shadow: var(--glow-glass);
+  /* Premium Glass Effect */
+  .glass-premium {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  /* Smooth Scrolling */
-  html {
-    scroll-behavior: smooth;
+  /* Aggressive Pulse Animation */
+  .pulse-aggressive {
+    animation: pulse-aggressive 1.5s infinite;
+  }
+
+  @keyframes pulse-aggressive {
+    0%, 100% { transform: scale(1); box-shadow: var(--glow-lime); }
+    50% { transform: scale(1.05); box-shadow: var(--glow-red); }
   }
 
   /* Mobile-first responsive text */
-  .text-responsive-xl {
-    font-size: clamp(2rem, 8vw, 5rem);
+  .text-explosive {
+    font-size: clamp(2.5rem, 12vw, 6rem);
+    font-weight: 900;
+    line-height: 0.9;
   }
 
-  .text-responsive-lg {
-    font-size: clamp(1.5rem, 6vw, 3rem);
-  }
-
-  .text-responsive-md {
-    font-size: clamp(1.125rem, 4vw, 1.5rem);
+  .text-impact {
+    font-size: clamp(1.8rem, 8vw, 4rem);
+    font-weight: 800;
   }
 }
