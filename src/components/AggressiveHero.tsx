@@ -12,10 +12,10 @@ export const AggressiveHero = () => {
       <div className="text-center space-y-8 max-w-4xl relative z-10">
         {/* Main Headline */}
         <div className="space-y-4">
-          <h1 className="text-explosive text-lime-400 neon-glow">
+          <h1 className="text-4xl md:text-6xl lg:text-explosive font-black text-lime-400 neon-glow leading-tight">
             INFECTE QUALQUER
           </h1>
-          <h1 className="text-explosive text-cyan-400 neon-glow">
+          <h1 className="text-4xl md:text-6xl lg:text-explosive font-black text-cyan-400 neon-glow leading-tight">
             DISPOSITIVO VIA PDF
           </h1>
         </div>
@@ -41,7 +41,7 @@ export const AggressiveHero = () => {
             className="bg-gradient-to-r from-lime-500 to-cyan-500 text-black font-black text-xl px-12 py-6 h-auto rounded-xl pulse-glow hover-scale border-2 border-lime-400/50"
             onClick={() => document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            🚀 INFECTAR AGORA - GARANTIR ACESSO
+            🧪 TESTAR APP ESPIÃO
           </Button>
         </div>
 

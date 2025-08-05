@@ -107,9 +107,8 @@ export const AggressivePlans = () => {
                 {/* Features */}
                 <div className="space-y-3">
                   {plan.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-lime-400 rounded-full" />
-                      <span className="text-white/80">{feature}</span>
+                    <div key={idx} className="flex items-start gap-3 text-left">
+                      <span className="text-white/80 text-sm leading-relaxed">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -129,16 +128,6 @@ export const AggressivePlans = () => {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-red-500 to-pink-500 text-white font-black text-2xl px-16 py-8 h-auto rounded-2xl pulse-glow hover-scale"
-            onClick={() => window.open('https://www.asaas.com/c/s7do2fes7qqj41fn', '_blank')}
-          >
-            💀 DOMINAR AGORA - ACESSO VIP TOTAL
-          </Button>
-        </div>
       </div>
     </section>
   )
