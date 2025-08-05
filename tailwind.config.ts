@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'mono': ['JetBrains Mono', 'Share Tech Mono', 'monospace'],
+				'tech': ['Share Tech Mono', 'JetBrains Mono', 'monospace'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -62,12 +66,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// XSPY Tech Colors
-				'cyber-blue': 'hsl(var(--cyber-blue))',
-				'neon-green': 'hsl(var(--neon-green))',
-				'electric-purple': 'hsl(var(--electric-purple))',
-				'plasma-pink': 'hsl(var(--plasma-pink))',
-				'warning-orange': 'hsl(var(--warning-orange))'
+				// Modern Tech Colors - Clean Palette
+				'cyber-cyan': 'hsl(var(--cyber-cyan))',
+				'neon-aqua': 'hsl(var(--neon-aqua))',
+				'electric-teal': 'hsl(var(--electric-teal))',
+				'plasma-blue': 'hsl(var(--plasma-blue))',
+				'warning-amber': 'hsl(var(--warning-amber))'
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',

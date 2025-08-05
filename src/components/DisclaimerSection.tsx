@@ -4,7 +4,7 @@ export const DisclaimerSection = () => {
   return (
     <section className="py-16 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
-        <Card className="max-w-4xl mx-auto p-8 bg-card/30 border-warning-orange/30 shadow-lg">
+        <div className="glass-card max-w-4xl mx-auto p-8 border-warning-amber/30 shadow-glow-accent">
           <div className="text-center space-y-6">
             <div className="flex items-center justify-center gap-3">
               <span className="text-3xl">🔐</span>
@@ -57,7 +57,7 @@ export const DisclaimerSection = () => {
               </div>
             </div>
           </div>
-        </Card>
+        </div>
       </div>
     </section>
   )

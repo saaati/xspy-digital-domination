@@ -17,19 +17,19 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        // XSPY Tech Variants
-        cyber: "bg-gradient-primary text-black font-bold shadow-glow-primary hover:shadow-glow-accent hover:scale-105 border border-electric-purple/30",
-        neon: "bg-gradient-secondary text-black font-bold shadow-glow-secondary hover:shadow-glow-primary hover:scale-105 border border-cyber-blue/30",
-        plasma: "bg-gradient-tech text-white font-bold shadow-glow-accent hover:animate-pulse-glow hover:scale-105 border border-plasma-pink/30",
-        vip: "bg-gradient-radial from-electric-purple via-plasma-pink to-warning-orange text-white font-bold shadow-glow-accent hover:shadow-2xl hover:scale-110 border-2 border-plasma-pink/50 relative overflow-hidden",
-        ghost_tech: "border border-electric-purple/50 text-electric-purple hover:bg-electric-purple/10 hover:shadow-glow-primary hover:text-plasma-pink"
+        // Modern Tech Variants - Clean & Mobile-First
+        cyber: "bg-gradient-primary text-primary-foreground font-bold shadow-glow-primary hover:shadow-glow-secondary hover:scale-105 border border-cyber-cyan/30 transition-all duration-300",
+        aqua: "bg-gradient-secondary text-secondary-foreground font-bold shadow-glow-secondary hover:shadow-glow-primary hover:scale-105 border border-electric-teal/30 transition-all duration-300",
+        tech: "bg-gradient-tech text-white font-bold shadow-glow-accent hover:animate-pulse-glow hover:scale-105 border border-neon-aqua/30 transition-all duration-300",
+        vip: "bg-gradient-to-r from-cyber-cyan via-electric-teal to-neon-aqua text-white font-bold shadow-glow-accent hover:shadow-2xl hover:scale-110 border-2 border-electric-teal/50 relative overflow-hidden transition-all duration-500",
+        ghost_tech: "glass-card border-cyber-cyan/40 text-cyber-cyan hover:bg-cyber-cyan/10 hover:shadow-glow-primary hover:text-electric-teal transition-all duration-300"
       },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-12 rounded-lg px-8",
-        xl: "h-14 rounded-xl px-10 text-base",
-        icon: "h-10 w-10",
+        default: "h-12 px-6 py-3 text-sm",
+        sm: "h-10 px-4 py-2 text-sm",
+        lg: "h-14 px-8 py-4 text-base",
+        xl: "h-16 px-12 py-5 text-lg",
+        icon: "h-12 w-12",
       },
     },
     defaultVariants: {

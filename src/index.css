@@ -8,52 +8,59 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 210 40% 3%;
-    --foreground: 0 0% 98%;
+    /* Modern Dark Background with Cyan/Turquoise Gradient */
+    --background: 220 30% 2%;
+    --foreground: 190 20% 98%;
 
-    --card: 210 40% 4%;
-    --card-foreground: 0 0% 98%;
+    /* Cards with Glassmorphism */
+    --card: 220 25% 4%;
+    --card-foreground: 190 15% 95%;
 
-    --popover: 210 40% 4%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 220 25% 4%;
+    --popover-foreground: 190 15% 95%;
 
-    --primary: 280 100% 60%;
-    --primary-foreground: 0 0% 0%;
+    /* Clean Tech Colors */
+    --primary: 180 100% 65%;
+    --primary-foreground: 220 30% 8%;
 
-    --secondary: 190 100% 50%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 170 100% 45%;
+    --secondary-foreground: 220 30% 8%;
 
-    --muted: 210 40% 8%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 20% 6%;
+    --muted-foreground: 190 15% 70%;
 
-    --accent: 310 100% 70%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 160 100% 50%;
+    --accent-foreground: 220 30% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 190 20% 98%;
 
-    --border: 210 40% 12%;
-    --input: 210 40% 12%;
-    --ring: 280 100% 60%;
+    /* Subtle Borders */
+    --border: 190 25% 12%;
+    --input: 190 20% 10%;
+    --ring: 180 100% 65%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* XSPY Tech Colors */
-    --cyber-blue: 200 100% 50%;
-    --neon-green: 120 100% 50%;
-    --electric-purple: 280 100% 60%;
-    --plasma-pink: 320 100% 70%;
-    --warning-orange: 30 100% 60%;
+    /* Modern Tech Colors - Clean Cyan/Turquoise Palette */
+    --cyber-cyan: 180 100% 65%;      /* Main cyan */
+    --neon-aqua: 170 100% 45%;       /* Aqua accent */
+    --electric-teal: 160 100% 50%;   /* Teal highlights */
+    --plasma-blue: 190 100% 60%;     /* Blue variant */
+    --warning-amber: 35 100% 55%;    /* Warm accent */
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--electric-purple)), hsl(var(--plasma-pink)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--cyber-blue)), hsl(var(--neon-green)));
-    --gradient-tech: linear-gradient(45deg, hsl(var(--electric-purple)), hsl(var(--cyber-blue)), hsl(var(--neon-green)));
+    /* Clean Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--cyber-cyan)), hsl(var(--electric-teal)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--plasma-blue)), hsl(var(--neon-aqua)));
+    --gradient-tech: linear-gradient(45deg, hsl(var(--cyber-cyan)), hsl(var(--electric-teal)), hsl(var(--neon-aqua)));
+    --gradient-background: linear-gradient(180deg, hsl(220 30% 2%), hsl(190 20% 3%));
+    --gradient-glass: linear-gradient(135deg, hsl(190 25% 8% / 0.1), hsl(180 20% 12% / 0.15));
     
-    /* Glows */
-    --glow-primary: 0 0 20px hsl(var(--electric-purple) / 0.5);
-    --glow-secondary: 0 0 20px hsl(var(--cyber-blue) / 0.5);
-    --glow-accent: 0 0 30px hsl(var(--plasma-pink) / 0.6);
+    /* Subtle Glows */
+    --glow-primary: 0 0 25px hsl(var(--cyber-cyan) / 0.3);
+    --glow-secondary: 0 0 20px hsl(var(--electric-teal) / 0.25);
+    --glow-accent: 0 0 30px hsl(var(--neon-aqua) / 0.35);
+    --glow-glass: 0 4px 20px hsl(190 30% 8% / 0.3);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -122,5 +129,40 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background: var(--gradient-background);
+    font-family: 'JetBrains Mono', 'Share Tech Mono', monospace;
+    font-weight: 400;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'JetBrains Mono', 'Share Tech Mono', monospace;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+
+  /* Glass Cards */
+  .glass-card {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--border) / 0.3);
+    box-shadow: var(--glow-glass);
+  }
+
+  /* Smooth Scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Mobile-first responsive text */
+  .text-responsive-xl {
+    font-size: clamp(2rem, 8vw, 5rem);
+  }
+
+  .text-responsive-lg {
+    font-size: clamp(1.5rem, 6vw, 3rem);
+  }
+
+  .text-responsive-md {
+    font-size: clamp(1.125rem, 4vw, 1.5rem);
   }
 }

@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer className="py-12 bg-gradient-to-t from-electric-purple/10 to-background border-t border-electric-purple/20">
+    <footer className="py-12 bg-gradient-to-t from-cyber-cyan/5 to-background border-t border-cyber-cyan/20">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-6">
           {/* Logo */}
