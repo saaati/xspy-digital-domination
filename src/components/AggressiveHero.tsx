@@ -41,7 +41,7 @@ export const AggressiveHero = () => {
             className="bg-gradient-to-r from-lime-500 to-cyan-500 text-black font-black text-xl px-12 py-6 h-auto rounded-xl pulse-glow hover-scale border-2 border-lime-400/50"
             onClick={() => document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            🧪 TESTAR APP ESPIÃO
+            📋 VER PLANOS
           </Button>
         </div>
 

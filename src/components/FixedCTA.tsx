@@ -6,9 +6,9 @@ export const FixedCTA = () => {
       <div className="max-w-sm mx-auto">
         <Button
           className="w-full bg-gradient-to-r from-lime-500 to-cyan-500 text-black font-black text-lg py-4 h-auto rounded-xl pulse-glow hover-scale"
-          onClick={() => window.open('https://www.asaas.com/c/s7do2fes7qqj41fn', '_blank')}
+          onClick={() => window.open('https://appespiao.duckdns.org/', '_blank')}
         >
-          🚀 INFECTAR AGORA
+          🧪 TESTAR APP ESPIÃO
         </Button>
       </div>
     </div>
