@@ -8,35 +8,56 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 210 40% 3%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 210 40% 4%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 210 40% 4%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 280 100% 60%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 190 100% 50%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 40% 8%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 310 100% 70%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 210 40% 12%;
+    --input: 210 40% 12%;
+    --ring: 280 100% 60%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* XSPY Tech Colors */
+    --cyber-blue: 200 100% 50%;
+    --neon-green: 120 100% 50%;
+    --electric-purple: 280 100% 60%;
+    --plasma-pink: 320 100% 70%;
+    --warning-orange: 30 100% 60%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--electric-purple)), hsl(var(--plasma-pink)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--cyber-blue)), hsl(var(--neon-green)));
+    --gradient-tech: linear-gradient(45deg, hsl(var(--electric-purple)), hsl(var(--cyber-blue)), hsl(var(--neon-green)));
+    
+    /* Glows */
+    --glow-primary: 0 0 20px hsl(var(--electric-purple) / 0.5);
+    --glow-secondary: 0 0 20px hsl(var(--cyber-blue) / 0.5);
+    --glow-accent: 0 0 30px hsl(var(--plasma-pink) / 0.6);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: box-shadow 0.3s ease, transform 0.3s ease;
 
     --sidebar-background: 0 0% 98%;
 
