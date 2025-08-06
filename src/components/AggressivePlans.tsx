@@ -18,7 +18,7 @@ export const AggressivePlans = () => {
         "✔️ Tecnologia de segurança sem arquivos externos"
       ],
       description: "Ideal para quem precisa de uma solução prática, rápida e sem complicações para monitorar um único dispositivo Android.",
-      buttonText: "🚀 Comece agora com facilidade",
+      buttonText: "COMPRAR AGORA",
       link: "https://www.asaas.com/c/fhfuz84psxlqcj66"
     },
     {
@@ -38,7 +38,7 @@ export const AggressivePlans = () => {
         "✔️ Atendimento via chat incluso"
       ],
       description: "Ideal para quem busca mais flexibilidade, cobertura dupla e recursos de acesso remoto.",
-      buttonText: "🚀 Aproveite agora mais alcance e controle",
+      buttonText: "COMPRAR AGORA",
       link: "https://www.asaas.com/c/jwplviezr8preie4",
       popular: true
     },
@@ -59,7 +59,7 @@ export const AggressivePlans = () => {
         "✔️ Atendimento prioritário incluso"
       ],
       description: "Ideal para quem precisa de uma solução profissional, robusta e com maior capacidade de monitoramento simultâneo.",
-      buttonText: "🚀 Tenha controle total com performance máxima",
+      buttonText: "COMPRAR AGORA",
       link: "https://www.asaas.com/c/s7do2fes7qqj41fn",
       vip: true
     }
