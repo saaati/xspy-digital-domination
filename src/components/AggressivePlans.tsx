@@ -70,8 +70,11 @@ export const AggressivePlans = () => {
       <div className="max-w-4xl mx-auto mb-12">
         <div className="bg-gradient-to-r from-red-500/20 to-pink-500/20 border-2 border-red-500 rounded-2xl p-6 text-center animate-pulse">
           <h2 className="text-2xl font-black text-red-400 mb-2">
-            ⚠️ ÚLTIMOS ACESSOS DISPONÍVEIS HOJE!
+            ⚠️ ÚLTIMOS ACESSOS DISPONÍVEIS!
           </h2>
+          <p className="text-yellow-300 font-bold text-sm mt-2">
+            💡 PAGAMENTO ÚNICO - Renovação pelo mesmo valor quando vencer
+          </p>
           <p className="text-red-300">Vagas limitadas - Garante o seu antes que acabe!</p>
         </div>
       </div>
@@ -84,8 +87,8 @@ export const AggressivePlans = () => {
           </h2>
         </div>
 
-        {/* Plans Grid - Melhor para Desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
+        {/* Plans Grid - Centralizado no Desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {plans.map((plan, index) => (
             <div
               key={index}

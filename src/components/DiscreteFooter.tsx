@@ -8,6 +8,15 @@ export const DiscreteFooter = () => {
         <div className="text-white/40 text-xs">
           © 2024 XSPY - Sistema Educacional • Dados Simulados • Uso Responsável
         </div>
+        
+        <div className="flex justify-center gap-6 mt-4">
+          <a 
+            href="/planos/politicas-privacidade" 
+            className="text-xs text-white/60 hover:text-white/80 transition-colors"
+          >
+            Política de Reembolso
+          </a>
+        </div>
       </div>
     </footer>
   )
