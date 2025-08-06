@@ -7,7 +7,7 @@ export const AggressivePlans = () => {
       devices: "1 DISPOSITIVO",
       period: "2 MESES DE ACESSO",
       originalPrice: "R$ 690,00",
-      price: "R$ 349,00",
+      price: "R$ 388,00",
       color: "from-green-500 to-emerald-500",
       glow: "green-500",
       features: [
@@ -25,12 +25,12 @@ export const AggressivePlans = () => {
       devices: "ATÉ 2 DISPOSITIVOS", 
       period: "3 MESES DE ACESSO",
       originalPrice: "R$ 949,00",
-      price: "R$ 549,00",
+      price: "R$ 689,00",
       color: "from-blue-500 to-cyan-500",
       glow: "blue-500",
       inheritedFrom: "✔️ Inclui todos os recursos do Plano Inicial",
       features: [
-        "✔️ Compatível com Android e iPhone",
+        "✔️ Compatível com <span class='text-lime-400 font-bold'>ANDROID</span> e <span class='text-cyan-400 font-bold'>IPHONE</span>",
         "✔️ Tecnologia avançada com documentos interativos (.PDF)",
         "✔️ Instalação remota inteligente em até dois dispositivos",
         "✔️ Painel de controle completo com dados em tempo real",
@@ -46,7 +46,7 @@ export const AggressivePlans = () => {
       devices: "ATÉ 5 DISPOSITIVOS",
       period: "6 MESES DE ACESSO", 
       originalPrice: "R$ 1.490,00",
-      price: "R$ 790,00",
+      price: "R$ 1.090,00",
       color: "from-red-500 to-pink-500",
       glow: "red-500",
       inheritedFrom: "✔️ Inclui todos os recursos do Plano Intermediário",
@@ -128,10 +128,13 @@ export const AggressivePlans = () => {
                 )}
 
                 {/* Features */}
-                <div className="space-y-2 lg:space-y-3 flex-1 text-left">
+                <div className="space-y-2 lg:space-y-3 flex-1 text-center">
                   {plan.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-start gap-2 lg:gap-3">
-                      <span className="text-white/80 text-xs lg:text-sm leading-relaxed">{feature}</span>
+                    <div key={idx} className="flex items-center justify-center gap-2 lg:gap-3">
+                      <span 
+                        className="text-white/80 text-xs lg:text-sm leading-relaxed"
+                        dangerouslySetInnerHTML={{ __html: feature }}
+                      />
                     </div>
                   ))}
                 </div>
