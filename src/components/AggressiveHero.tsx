@@ -45,12 +45,6 @@ export const AggressiveHero = () => {
           </Button>
         </div>
 
-        {/* Urgency */}
-        <div className="bg-red-500/20 border border-red-500 rounded-xl p-4 animate-pulse">
-          <p className="text-red-400 font-bold text-lg">
-            ⚠️ APENAS 47 VAGAS RESTANTES HOJE!
-          </p>
-        </div>
       </div>
     </section>
   )

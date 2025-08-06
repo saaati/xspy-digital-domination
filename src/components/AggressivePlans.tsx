@@ -78,6 +78,14 @@ export const AggressivePlans = () => {
           <h2 className="text-impact text-white mb-4">
             ESCOLHA SEU <span className="text-lime-400">PLANO DE DOMINAÇÃO</span>
           </h2>
+          <div className="bg-yellow-500/20 border border-yellow-500 rounded-xl p-4 max-w-2xl mx-auto mt-8">
+            <p className="text-yellow-300 font-bold text-lg">
+              💡 PAGAMENTO ÚNICO - Renovação pelo mesmo valor quando vencer
+            </p>
+            <p className="text-white/80 text-sm mt-2">
+              Sem mensalidades escondidas ou aumentos inesperados
+            </p>
+          </div>
         </div>
 
         {/* Plans Grid - Centralizado no Desktop */}

@@ -3,10 +3,10 @@ import { useState, useEffect } from 'react'
 export const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState(0)
 
-  // Function to generate random time between 7-16 minutes (in seconds)
+  // Function to generate random time between 12-18 minutes (in seconds)
   const getRandomTime = () => {
-    const minMinutes = 7
-    const maxMinutes = 16
+    const minMinutes = 12
+    const maxMinutes = 18
     const randomMinutes = Math.floor(Math.random() * (maxMinutes - minMinutes + 1)) + minMinutes
     return randomMinutes * 60 // Convert to seconds
   }
@@ -58,9 +58,6 @@ export const CountdownTimer = () => {
         </div>
       </div>
 
-      <p className="text-yellow-300 font-bold text-xs lg:text-sm mb-2">
-        💡 PAGAMENTO ÚNICO - Renovação pelo mesmo valor quando vencer
-      </p>
       <p className="text-red-300 text-xs lg:text-sm">
         Vagas limitadas - Garante o seu antes que acabe!
       </p>
