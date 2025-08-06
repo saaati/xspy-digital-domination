@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import { CountdownTimer } from "@/components/CountdownTimer"
 
 export const AggressivePlans = () => {
   const plans = [
@@ -66,17 +67,9 @@ export const AggressivePlans = () => {
 
   return (
     <section id="planos" className="py-20 px-4 relative">
-      {/* Urgency Banner */}
+      {/* Urgency Banner with Countdown */}
       <div className="max-w-4xl mx-auto mb-12">
-        <div className="bg-gradient-to-r from-red-500/20 to-pink-500/20 border-2 border-red-500 rounded-2xl p-6 text-center animate-pulse">
-          <h2 className="text-2xl font-black text-red-400 mb-2">
-            ⚠️ ÚLTIMOS ACESSOS DISPONÍVEIS!
-          </h2>
-          <p className="text-yellow-300 font-bold text-sm mt-2">
-            💡 PAGAMENTO ÚNICO - Renovação pelo mesmo valor quando vencer
-          </p>
-          <p className="text-red-300">Vagas limitadas - Garante o seu antes que acabe!</p>
-        </div>
+        <CountdownTimer />
       </div>
 
       <div className="max-w-6xl mx-auto">
