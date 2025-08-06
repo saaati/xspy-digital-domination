@@ -3,51 +3,62 @@ import { Button } from "@/components/ui/button"
 export const AggressivePlans = () => {
   const plans = [
     {
-      name: "🟢 INICIAL",
-      devices: "1 CELULAR",
+      name: "🟢 PLANO INICIAL",
+      devices: "1 DISPOSITIVO",
       period: "2 MESES DE ACESSO",
       originalPrice: "R$ 690,00",
       price: "R$ 349,00",
       color: "from-green-500 to-emerald-500",
       glow: "green-500",
-      features: ["✅ Acesso básico", "✅ Monitoramento leve", "🚫 Sem recursos de invasão com .PDF"],
+      features: [
+        "✔️ Monitoramento essencial com acesso rápido",
+        "✔️ Compatível com Android",
+        "✔️ Instalação via aplicativo direto",
+        "✔️ Tecnologia de segurança sem arquivos externos"
+      ],
+      description: "Ideal para quem precisa de uma solução prática, rápida e sem complicações para monitorar um único dispositivo Android.",
+      buttonText: "🚀 Comece agora com facilidade",
       link: "https://www.asaas.com/c/fhfuz84psxlqcj66"
     },
     {
-      name: "🔵 INTERMEDIÁRIO",
-      devices: "2 CELULARES", 
+      name: "🔵 PLANO INTERMEDIÁRIO",
+      devices: "ATÉ 2 DISPOSITIVOS", 
       period: "3 MESES DE ACESSO",
       originalPrice: "R$ 949,00",
-      price: "R$ 449,00",
+      price: "R$ 549,00",
       color: "from-blue-500 to-cyan-500",
       glow: "blue-500",
-      inheritedFrom: "Todas as funções do Plano Inicial +",
-      features: ["✅ Inclui método de infecção via .PDF", "✅ Acesso completo ao painel de controle", "✅ Suporte padrão via chat"],
+      inheritedFrom: "✔️ Inclui todos os recursos do Plano Inicial",
+      features: [
+        "✔️ Compatível com Android e iPhone",
+        "✔️ Tecnologia avançada com documentos interativos (.PDF)",
+        "✔️ Instalação remota inteligente em até dois dispositivos",
+        "✔️ Painel de controle completo com dados em tempo real",
+        "✔️ Atendimento via chat incluso"
+      ],
+      description: "Ideal para quem busca mais flexibilidade, cobertura dupla e recursos de acesso remoto.",
+      buttonText: "🚀 Aproveite agora mais alcance e controle",
       link: "https://www.asaas.com/c/jwplviezr8preie4",
       popular: true
     },
     {
-      name: "🟡 AVANÇADO",
-      devices: "4 CELULARES",
+      name: "🔴 PLANO AVANÇADO",
+      devices: "ATÉ 5 DISPOSITIVOS",
       period: "6 MESES DE ACESSO", 
-      originalPrice: "R$ 1.390,00",
-      price: "R$ 690,00",
-      color: "from-yellow-500 to-orange-500",
-      glow: "yellow-500",
-      inheritedFrom: "Todas as funções do Plano Intermediário +",
-      features: ["✅ Método completo com .PDF infectável", "✅ Atendimento prioritário", "✅ Servidores robustos — sem delay", "✅ Informações em tempo real", "✅ Relatórios detalhados e atualizações"],
-      link: "https://www.asaas.com/c/s7do2fes7qqj41fn"
-    },
-    {
-      name: "🔴 ACESSO VIP TOTAL",
-      devices: "8 CELULARES",
-      period: "12 MESES DE ACESSO", 
-      originalPrice: "R$ 3.490,00",
-      price: "R$ 1.690,00",
+      originalPrice: "R$ 1.490,00",
+      price: "R$ 790,00",
       color: "from-red-500 to-pink-500",
       glow: "red-500",
-      inheritedFrom: "Todas as funções do Plano Avançado +",
-      features: ["🔥 Pacote mais completo e poderoso", "✅ Infecção avançada (PDF + Weblink + Spoofing)", "✅ Acesso instantâneo com servidores dedicados", "✅ Painel com inteligência artificial de análise", "✅ Suporte VIP 24h via WhatsApp", "✅ Relatórios forenses + backups automáticos", "✅ Atualizações gratuitas incluídas", "✅ Assistência técnica remota"],
+      inheritedFrom: "✔️ Inclui todos os recursos do Plano Intermediário",
+      features: [
+        "✔️ Tecnologia premium com arquivos dinâmicos (.PDF)",
+        "✔️ Desempenho otimizado em servidores dedicados",
+        "✔️ Relatórios detalhados e informações em tempo real",
+        "✔️ Atualizações automáticas e suporte técnico avançado",
+        "✔️ Atendimento prioritário incluso"
+      ],
+      description: "Ideal para quem precisa de uma solução profissional, robusta e com maior capacidade de monitoramento simultâneo.",
+      buttonText: "🚀 Tenha controle total com performance máxima",
       link: "https://www.asaas.com/c/s7do2fes7qqj41fn",
       vip: true
     }
@@ -125,16 +136,25 @@ export const AggressivePlans = () => {
                   ))}
                 </div>
 
+                {/* Description */}
+                {plan.description && (
+                  <div className="flex-shrink-0 pt-2">
+                    <p className="text-white/70 text-xs lg:text-sm leading-relaxed italic border-t border-white/10 pt-3">
+                      {plan.description}
+                    </p>
+                  </div>
+                )}
+
                 {/* CTA Button */}
                 <div className="flex-shrink-0 mt-auto pt-4">
                   <Button
-                    className={`w-full bg-gradient-to-r ${plan.color} text-black font-black text-base lg:text-lg py-4 lg:py-6 h-auto rounded-xl hover-scale`}
+                    className={`w-full bg-gradient-to-r ${plan.color} text-black font-black text-sm lg:text-base py-4 lg:py-6 h-auto rounded-xl hover-scale`}
                     onClick={() => window.open(plan.link, '_blank')}
                     style={{
                       boxShadow: `0 0 20px ${plan.glow === 'green-500' ? '#10b981' : plan.glow === 'blue-500' ? '#3b82f6' : plan.glow === 'yellow-500' ? '#eab308' : '#ef4444'}/40%`
                     }}
                   >
-                    🚀 GARANTIR ACESSO
+                    {plan.buttonText || '🚀 GARANTIR ACESSO'}
                   </Button>
                 </div>
               </div>
