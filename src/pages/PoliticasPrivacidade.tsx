@@ -17,39 +17,15 @@ const PoliticasPrivacidade = () => {
             ← Voltar
           </Button>
           <h1 className="text-4xl font-black text-white mb-4">
-            Políticas de Privacidade e Reembolso
+            Políticas de Privacidade
           </h1>
           <p className="text-white/70">
-            Confira nossas políticas para uso do XSPY
+            Confira nossa política de privacidade do XSPY
           </p>
         </div>
 
         {/* Content */}
         <div className="space-y-8">
-          {/* Política de Reembolso */}
-          <section className="glass-dark p-8 rounded-2xl border border-white/20">
-            <h2 className="text-2xl font-bold text-lime-400 mb-6">
-              🔄 Política de Reembolso
-            </h2>
-            <div className="space-y-4 text-white/80">
-              <p>
-                <strong>Prazo para Reembolso:</strong> Você tem até 7 dias corridos após a compra para solicitar o reembolso, desde que não tenha utilizado mais de 20% dos recursos disponíveis.
-              </p>
-              <p>
-                <strong>Condições para Reembolso:</strong>
-              </p>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Solicitação dentro do prazo de 7 dias</li>
-                <li>Uso limitado a 20% dos recursos</li>
-                <li>Motivo justificado para o cancelamento</li>
-                <li>Conta em situação regular</li>
-              </ul>
-              <p>
-                <strong>Processamento:</strong> O reembolso será processado em até 5 dias úteis após aprovação da solicitação.
-              </p>
-            </div>
-          </section>
-
           {/* Política de Privacidade */}
           <section className="glass-dark p-8 rounded-2xl border border-white/20">
             <h2 className="text-2xl font-bold text-cyan-400 mb-6">
